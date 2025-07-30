@@ -20,7 +20,9 @@ public class AgentEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private UserEntity userId; // Foreign key to UserEntity
+    @Column(name = "license_number", unique = true, nullable = false)
     private String licenseNumber;
+    @Column(name = "agency_name", nullable = false)
     private String agencyName;
 }
 
